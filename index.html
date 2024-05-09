@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  >
+   
+    <link rel="stylesheet" href="weather.css">
+  </head>
+  <body>
+    <div class="block">
+    <div class="container">
+    <div class="main">
+    <div class="head">  <h4>Weather Report <img src="./cloud.png" id="icon"alt="sun" height="35px"width="25px" ></h4></div>
+  <div class="links"> 
+    <nav >
+        <a href="videos.html"style="text-decoration:none">videos</a>
+        <a href="https://www.youtube.com/channel/UClQK9j4uUAnrZamq1_FhtcQ"style="text-decoration:none">News</a>
+         <a href="https://www.bbc.com/weather"style="text-decoration:none">Updates</a>
+
+     <div class="btn">
+   <button class="bt">
+   <a href="https://www.netweather.tv/weather-forecasts/blogs">blog</a>  </button>    
+   </div> 
+</nav>
+</div>
+    </div>
+    <div class="middle">
+    <div id="datetime">
+      <script>
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth()+1;
+        var year = today.getFullYear();
+        document.write(day + "/" + month + "/" + year);
+      </script>
+      <h5 id="time"></h5>
+      <script>
+        function getTime(){
+          var today = new Date();
+          var hour = today.getHours();
+          var minute = today.getMinutes();
+          var seconds= today.getSeconds();
+          document.getElementById("time").innerHTML=hour+ ":" + minute + ":" + seconds;
+          setInterval("getTime()",1000);
+        }
+        getTime();
+
+      </script>
+
+      
+  
+        </div>
+  <div class="search">
+      <input type="text" id="location-input" placeholder="Enter Location" />
+      <button id="button"><i class="fa fa-search"></i></button>  </div>
+     
+     
+  
+    <div class="ted">
+      <div id="tempimg">   <div id="deg"style="padding-left:150px"> 
+        <span id="temp">25</span><span id="unit">&#176</span id="c"><span>C</span></div> 
+        <img src="./csun3.png" id="report"height="220"width="200"style="margin-right:300px;"></div>
+     
+      <div class="degree">
+        <p>location:</p>  <div id="location">Hyderabad</div>
+        <p>description:</p>  <div id="temp-desc">cloudy</div>
+        <p>humidity:<img src="./water.png" id="icon"alt="sun" height="25px"width="20px" ></p>  <div id="humidity">243</div>
+         <p>pressure:<img src="./clo.png" id="icon"alt="sun" height="25px"width="20px" ></p> <div id="pressure">32</div> 
+         <p>wind:<img src="./wind.png" id="icon"alt="sun" height="25px"width="20px" ></p> <div id="wind">1.6</div> 
+        </div>
+  
+  
+</div>
+<script src="script.js"></script>
+</div>
+  </body>
+</html>
